@@ -1,0 +1,141 @@
+*{ /*config global*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    outline: none;
+    color: inherit; /*zerando os padrões da página*/
+}
+html{
+    height: 100vh;
+}
+header{
+    justify-content: space-between;
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 35px; /*espaço*/
+    
+}
+a.link:hover{
+    transform: scale(1.1); /*aumentar letra quando passa o mouse em cima*/
+    transition: transform 0.1s; /*suavizar transição*/
+}
+footer{
+    justify-content: center;
+    font-size: small;
+   
+}
+header, footer{
+    display: flex;
+    background-color: #5c20c6;
+    color: #f9f9f9;
+    padding: 25px 15%;
+    font-family: sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-weight: bold;
+}
+main{
+    background-color: #cccccc;
+
+}
+section{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 20%;
+    gap: 40px;
+}
+.text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    align-items: center;
+}
+.text > h1,h2, p, button{
+    margin-bottom: 10px;
+
+}
+.text > div{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px;
+}
+button{
+    color: #f9f9f9;
+    background-color: #441f88;
+    border-radius: 10px;
+    font-size: 15px;
+    border-style: none;
+
+}
+button:hover{
+    color: #f9f9f9;
+    background-color: #5c20c6;
+    cursor: pointer; /*mudando o cursor do código*/
+    
+}
+
+h1{
+    font-size: 16px;
+}
+h2{
+    font-size: 30px;
+}
+#btn-explore{
+    width: 200px;
+    height: 40px;
+    
+}
+#btn-github{
+    width: 110px;
+    height: 40px;
+}
+
+.form button{
+    width: 400px;
+    height: 40px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+
+    
+}
+.form input, textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: #f9f9f9;
+}
+#redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+#redes img{
+    width: 60px;
+    height: auto;
+    
+}
+#astro{
+    width: 1000px;
+    height: 100%;
+}
+#profile img{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid #441f88;
+}
+   
