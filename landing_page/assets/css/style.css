@@ -6,11 +6,12 @@
     outline: none;
     color: inherit; /*zerando os padrões da página*/
 }
-html{
-    height: 100vh;
-}
+
 header{
     justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    padding: 20px 15%;
     
 }
 nav{
@@ -26,19 +27,21 @@ a.link:hover{
 footer{
     justify-content: center;
     font-size: small;
+    padding: 25px;
    
 }
 header, footer{
     display: flex;
-    background-color: #5c20c6;
+    background-color: #5d20c6eb;
     color: #f9f9f9;
-    padding: 25px 15%;
+    width: 100%;
     font-family: sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
     font-weight: bold;
 }
 main{
     background-color: #cccccc;
-
+    padding: 75px 0 0 0;
+    
 }
 section{
     display: flex;
@@ -86,12 +89,12 @@ h1{
 h2{
     font-size: 30px;
 }
-#btn-explore{
+.btn-explore{
     width: 200px;
     height: 40px;
     
 }
-#btn-github{
+.btn-github{
     width: 110px;
     height: 40px;
 }
@@ -115,23 +118,24 @@ form{
     margin-bottom: 15px;
     margin-top: 5px;
     border: #f9f9f9;
+    
 }
-#redes{
+.redes{
     display: flex;
     flex-direction: row;
     justify-content: center;
     
 }
-#redes img{
+.redes img{
     width: 60px;
     height: auto;
     
 }
-#astro{
+.astro{
     width: 1000px;
     height: 100%;
 }
-#profile img{
+.profile img{
     display: flex;
     flex-direction: column;
     width: 300px;
