@@ -51,7 +51,7 @@ function validaAssunto() {
 function validaMensagem() {
     let txtMessage = document.querySelector('#txtMessage')
 
-    if (mensagem.value.length >= 40){
+    if (mensagem.value.length >= 400){
         txtMessage.innerHTML = 'Máximo de caracteres atingido!'
         txtMessage.style.color = 'red'
         txtMessage.style.position = 'relative'
@@ -62,3 +62,28 @@ function validaMensagem() {
         txtMessage.innerHTML = ''
     }
 }
+
+const username = 'eijess';
+const getPerfilImagem = document.querySelector('#profile-picture');
+const getSeguidores = document.querySelector('#followers');
+const getRepositorios = document.querySelector('#repositories');
+
+async function getApiGitHub(){
+    try{
+
+        const dadosPerfil = await fetch(`https://api.github.com/users/${username}`);
+        const perfil = await dadosPerfil.json();
+
+        getPerfilImagem.src = perfil.avatar_url;
+        getSeguidores.innerHTML = `Seguidores: ${perfil.followers}`;
+        getRepositorios.innerHTML = `Repositórios: ${perfil.public_repos}`;
+        
+    }catch (erorr) {
+        console.log(error);
+    }
+}
+function gitHub(){
+    open(`https://github.com/${username}`, '_blank');
+}
+
+getApiGitHub();
